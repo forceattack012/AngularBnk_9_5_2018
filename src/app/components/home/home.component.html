@@ -1,0 +1,5 @@
+<h1>BNK</h1>
+ <div *ngFor="let mem of members" class="box">
+    <img [src]="mem.imgUrl"  width="200" [routerLink]="['/instagram',mem.instagramId]">
+    {{mem.name}}
+ </div>
