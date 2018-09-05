@@ -1,3 +1,7 @@
-<p>
-  login works!
-</p>
+<form [formGroup]="loginForm">
+  <label for="Username">Username</label>
+  <input type="text" id="login" formControlName="login"><br>
+  <label for="Password">Password</label>
+  <input type="text" id="password" formControlName="password"><br>
+  <button (click)="login()">Login</button>
+</form>

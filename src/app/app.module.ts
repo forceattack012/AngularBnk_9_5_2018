@@ -8,6 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { InstagramComponent } from './components/instagram/instagram.component';
 import { LoginComponent } from './components/login/login.component';
 
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
 const routeTable : Route[] = [
       {
         path:'',
@@ -38,7 +40,9 @@ const routeTable : Route[] = [
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routeTable)
+    RouterModule.forRoot(routeTable),
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

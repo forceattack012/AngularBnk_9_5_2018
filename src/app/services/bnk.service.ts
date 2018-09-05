@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Member } from '../models/member';
 import { feed } from '../models/feed';
 import { Feedlist } from '../models/feedlist';
+import { environment } from '../../environments/environment';
 
 
 @Injectable({
@@ -17,7 +18,7 @@ export class BnkService {
   }
   
   memberList(): Observable<Member[]> {
-     return this.http.get<Member[]>('http://localhost:3000/bnk/members');
+     return this.http.get<Member[]>(`${environment.apiHost}/bnk/members`);
   }
 
   feelList(name : string): Observable<Feedlist>{
